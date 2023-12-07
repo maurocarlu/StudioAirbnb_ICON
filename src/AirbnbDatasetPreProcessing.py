@@ -30,9 +30,19 @@ class AirbnbDatasetPreprocessing:
             # Rimuovi simbolo "$" e converti la colonna 'price' in numerica
             self.data['price'] = self.data['price'].replace('[\$,]', '', regex=True)
             self.data['price'] = pd.to_numeric(self.data['price'], errors='coerce')
+            # Rimuovi simbolo "$" e converti la colonna 'service fee' in numerica
+            self.data['service fee'] = self.data['service fee'].replace('[\$,]', '', regex=True)
+            self.data['service fee'] = pd.to_numeric(self.data['service fee'], errors='coerce')
 
             # Sostituisci i valori non numerici con la media della colonna 'price'
             self.data['price'].fillna(self.data['price'].mean(), inplace=True)
+            # Sostituisci i valori non numerici con la media della colonna 'service fee'
+            self.data['service fee'].fillna(self.data['service fee'].mean(), inplace=True)
+
+            # Converti la colonna 'construction year' in tipo int
+            self.data['Construction year'] = self.data['Construction year'].astype('Int64')
+            # Converti la colonna 'minimum nights' in tipo int
+            self.data['minimum nights'] = self.data['minimum nights'].astype('Int64')
 
 
             print("Dati puliti.")
