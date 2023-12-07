@@ -22,9 +22,9 @@ class AirbnbDatasetPreprocessing:
         # Esempio di operazioni di pre-processing: rimozione di colonne non necessarie e gestione di valori mancanti
         if self.data is not None:
             # Rimuovi colonne non necessarie
-            columns_to_drop = ['country', 'NAME', 'country code', 'host_identity_verified', 'instant_bookable', 'license',
-                               'host name', 'cancellation_policy', 'service fee', 'minimum nights', 'last review',
-                               'reviews per month', 'calculated host listings count', 'availability 365', 'house_rules']
+            columns_to_drop = ['country', 'NAME', 'country code', 'license',
+                               'host name', 'house_rules']
+
             self.data = self.data.drop(columns=columns_to_drop)
 
             # Rimuovi simbolo "$" e converti la colonna 'price' in numerica
