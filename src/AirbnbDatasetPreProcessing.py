@@ -12,7 +12,7 @@ class AirbnbDatasetPreprocessing:
     def load_data(self):
         # Carico il file CSV in un DataFrame pandas
         try:
-            self.data = pd.read_csv(self.original_file_path)
+            self.data = pd.read_csv(self.original_file_path, low_memory=False)
             print("Caricamento dati completato.")
         except FileNotFoundError:
             print(f"Errore: File non trovato - {self.original_file_path}")
@@ -101,7 +101,6 @@ class AirbnbDatasetPreprocessing:
             mean_date = self.data['last review'].mean().date()
             self.data['last review'].fillna(mean_date, inplace=True)
             self.data['last review'] = pd.to_datetime(self.data['last review'])
-
 
             print("Dati puliti.")
 
