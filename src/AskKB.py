@@ -12,7 +12,7 @@ def main():
         elif choice == 2:
             ask_user_preferences_and_query(prolog)
         elif choice == 3:
-            exit(0)
+            return
         else:
             print("Input non valido. Utilizzare solo 1 o 2 o 3.")
 
@@ -153,7 +153,7 @@ def ask_user_preferences_and_query(prolog):
                                      f"host_identity_verified({highest_review_score_id}, HostIdentityVerified)"))
 
     # Print the Airbnb ID with the highest final score
-    print(f"The Airbnb with the highest final score is: {highest_review_score_id}")
+    print(f"L'airbnb con lo score migliore è: {highest_review_score_id}")
 
     # Print all the facts related to this Airbnb ID
     for fact in airbnb_facts:
