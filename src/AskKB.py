@@ -153,7 +153,7 @@ def ask_user_preferences_and_query(prolog):
                                      f"host_identity_verified({highest_review_score_id}, HostIdentityVerified)"))
 
     # Print the Airbnb ID with the highest final score
-    print(f"L'airbnb con lo score migliore è: {highest_review_score_id}")
+    print(f"L'airbnb con lo score migliore è quello con id: {highest_review_score_id}")
 
     # Print all the facts related to this Airbnb ID
     for fact in airbnb_facts:

@@ -50,13 +50,13 @@ class CreateKB:
             for quartiere in quartieri_centrali:
                 f.write(f"posizione_centrale('{quartiere}').\n")
 
-            quartieri = ["Clinton Hill", "East Harlem", "Bedford-Stuyvesant", "Upper East Side",
+            quartieri_periferici = ["Clinton Hill", "East Harlem", "Bedford-Stuyvesant", "Upper East Side",
                          "South Slope", "Bushwick", "Flatbush", "Fort Greene",
                          "Prospect-Lefferts Gardens", "Long Island City", "Williamsburg",
                          "Greenpoint", "Park Slope", "Brooklyn Heights", "Gowanus",
                          "Washington Heights", "Flatlands", "Cobble Hill", "Flushing", "DUMBO"]
 
-            for quartiere in quartieri:
+            for quartiere in quartieri_periferici:
                 f.write(f"quartieri_periferici('{quartiere}').\n")
 
             f.write(f"cancellazione_stretta('strict').\n")

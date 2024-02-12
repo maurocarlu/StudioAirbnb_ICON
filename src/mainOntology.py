@@ -3,9 +3,9 @@ from owlready2 import *
 def main_ontology():
     print("\nBenvenuto nell'ontologia\n")
     while(True):
-        print("Seleziona cosa vorresti esplorare:\n\n1) Visualizzazione Classi\n2) Visualizzazione proprietà d'oggetto\n3) Visualizzazione proprietà dei dati\n4) Visualizzazione query d'esempio\n5) Esci dall' Ontologia\n")
+        print("Seleziona cosa vorresti esplorare:\n1) Visualizzazione Classi\n2) Visualizzazione proprietà d'oggetto\n3) Visualizzazione proprietà dei dati\n4) Esegui query\n5) Esci dall' Ontologia\n")
 
-        risposta_menù = input("Inserisci qui la tua scelta:\t")
+        risposta_menù = input("Inserisci qui la tua scelta: ")
 
         ontology = get_ontology('ontology.owl').load()
 
@@ -14,8 +14,10 @@ def main_ontology():
             print(list(ontology.classes()))
 
             while(True):
-                print("\nVorresti esplorare meglio qualche classe in particolare?\n\n1) Alloggio\n2) Città\n3) Proprietario\n4) Provider\n5) Quartiere\n")
-                risposta_class = input("Inserisci qui la tua scelta:\t")
+                print("\nVorresti esplorare meglio qualche classe in particolare?\n\n1) Alloggio\n2) Città\n"
+                    "3) Proprietario\n4) Provider\n5) Quartiere\n6) Prenotazione\n7) Cliente\n8) Pagamento\n")
+
+                risposta_class = input("Inserisci qui la tua scelta: ")
 
                 if risposta_class == '1':
                     print("\nLista degli alloggi presenti:\n")
@@ -37,15 +39,23 @@ def main_ontology():
                     print("\nLista dei quartieri presenti:\n")
                     quartiere = ontology.search(is_a = ontology.Quartiere)
                     print(quartiere)
-
-
-
+                elif risposta_class == '6':
+                    print("\nLista delle prenotazioni presenti:\n")
+                    prenotazione = ontology.search(is_a = ontology.Prenotazione)
+                    print(prenotazione)
+                elif risposta_class == '7':
+                    print("\nLista dei clienti presenti:\n")
+                    cliente = ontology.search(is_a = ontology.Cliente)
+                    print(cliente)
+                elif risposta_class == '8':
+                    print("\nLista dei pagamenti presenti:\n")
+                    pagamento = ontology.search(is_a = ontology.Pagamento)
+                    print(pagamento)
                 else:
                     print("\nInserisci il numero correttamente tra quelli presentati")
 
-                print("\nVorresti tornare indietro o continuare?\tIndietro (si) Continua (no)")
-                risp = input("\n")
-                if risp == 'si':
+                risp = input("\nVuoi esaminare un'altra classe? (y/n): ")
+                if risp == 'n' or risp == 'N':
                     break
 
         elif risposta_menù == '2':
@@ -55,10 +65,26 @@ def main_ontology():
             print("\nProprietà dei dati presenti nell'ontologia:\n")
             print(list(ontology.data_properties()), "\n")
         elif risposta_menù == '4':
-            print("\nQuery d'esempio:")
-            print("\n-Lista di alloggi che presentano il proprietario 'mauro_carlucci':\n")
-            alloggio = ontology.search(is_a = ontology.Alloggio, is_owned = ontology.search_one(username="maurocarlu"))
-            print(alloggio, "\n")
+            while True:
+                print("1) Lista di alloggi che presentano il proprietario 'mauro_carlucci\n"
+                      "2) Lista di alloggi pubblicati su 'AirBnB'\n"
+                      "3) Prenotazioni effettuate da Marco Blu\n"
+                      "4) Torna indietro\n")
+                scelta = input("inserisci la tua scelta: ")
+                if scelta == '1':
+                    alloggio = ontology.search(is_a=ontology.Alloggio,is_owned=ontology.search_one(username="maurocarlu"))
+                    print(alloggio, "\n")
+                elif scelta == '2':
+                    alloggio = ontology.search(is_a=ontology.Alloggio,is_situated=ontology.search(is_a=ontology.New_York))
+                    print(alloggio, "\n")
+                elif scelta == '3':
+                    prenotazione = ontology.search(is_a=ontology.Prenotazione,submitted_by=ontology.search_one(username="marcoblu"))
+                    print(prenotazione, "\n")
+                elif scelta == '4':
+                    break
+                else:
+                    print("Scelta non valida. Inserisci un numero tra 1 e 4.")
+
         elif risposta_menù == '5':
             break
 
