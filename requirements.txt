@@ -3,7 +3,7 @@ pandas
 matplotlib
 seaborn
 plotly
-ipwidgets>=7.6
+ipywidgets>=7.6
 jupyter-dash
 owlready2
 pyswip
