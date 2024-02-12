@@ -1,0 +1,503 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10/"
+     xml:base="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-10="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#has_received -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#has_received">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Alloggio"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Prenotazione"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#is_composed -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#is_composed">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Città"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Quartiere"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#is_owned -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#is_owned">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Proprietario"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Alloggio"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#is_published_on -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#is_published_on">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Alloggio"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Provider"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#is_situated -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#is_situated">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Alloggio"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Città"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Quartiere"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#make -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#make">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Cliente"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Pagamento"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#submitted_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#submitted_by">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Prenotazione"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Cliente"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#CAP -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#CAP">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Città"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#amount -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#amount">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Pagamento"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#check_in_date -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#check_in_date">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Prenotazione"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#check_out_date -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#check_out_date">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Prenotazione"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#construction_year -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#construction_year">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Alloggio"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#guest_number -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#guest_number">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Prenotazione"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#minimum_nights -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#minimum_nights">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Alloggio"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#number_of_reviews -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#number_of_reviews">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Alloggio"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#payment_date -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#payment_date">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Pagamento"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#price -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#price">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Alloggio"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#rating -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#rating">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Alloggio"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#room_type -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#room_type">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Alloggio"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#username -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#username">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Cliente"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Proprietario"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#via -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#via">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Alloggio"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Alloggio -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Alloggio"/>
+    
+
+
+    <!-- http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Città -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Città"/>
+    
+
+
+    <!-- http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Cliente -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Cliente"/>
+    
+
+
+    <!-- http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Pagamento -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Pagamento"/>
+    
+
+
+    <!-- http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Prenotazione -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Prenotazione"/>
+    
+
+
+    <!-- http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Proprietario -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Proprietario"/>
+    
+
+
+    <!-- http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Provider -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Provider"/>
+    
+
+
+    <!-- http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Quartiere -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Quartiere">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Città"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#AirBnB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#AirBnB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Provider"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Bari -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Bari">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Città"/>
+        <untitled-ontology-10:is_composed rdf:resource="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#japigia"/>
+        <untitled-ontology-10:CAP rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">70126</untitled-ontology-10:CAP>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Booking_com -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Booking_com">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Provider"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Brooklyn -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Brooklyn">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Quartiere"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Manhattan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Manhattan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Quartiere"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#New_York -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#New_York">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Città"/>
+        <untitled-ontology-10:is_composed rdf:resource="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Brooklyn"/>
+        <untitled-ontology-10:is_composed rdf:resource="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Manhattan"/>
+        <untitled-ontology-10:is_composed rdf:resource="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Queens"/>
+        <untitled-ontology-10:CAP rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20000</untitled-ontology-10:CAP>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Queens -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Queens">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Quartiere"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#casa_Chiara -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#casa_Chiara">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Alloggio"/>
+        <untitled-ontology-10:has_received rdf:resource="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#prenotazione1"/>
+        <untitled-ontology-10:is_owned rdf:resource="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#mauro_carlucci"/>
+        <untitled-ontology-10:is_published_on rdf:resource="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#AirBnB"/>
+        <untitled-ontology-10:is_situated rdf:resource="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Manhattan"/>
+        <untitled-ontology-10:is_situated rdf:resource="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#New_York"/>
+        <untitled-ontology-10:construction_year rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2007</untitled-ontology-10:construction_year>
+        <untitled-ontology-10:minimum_nights rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3</untitled-ontology-10:minimum_nights>
+        <untitled-ontology-10:number_of_reviews rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1200</untitled-ontology-10:number_of_reviews>
+        <untitled-ontology-10:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">100.0</untitled-ontology-10:price>
+        <untitled-ontology-10:rating rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.0</untitled-ontology-10:rating>
+        <untitled-ontology-10:room_type>Entire home/apt</untitled-ontology-10:room_type>
+        <untitled-ontology-10:via>via Empire state building</untitled-ontology-10:via>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#casa_Dei_Gigli -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#casa_Dei_Gigli">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Alloggio"/>
+        <untitled-ontology-10:has_received rdf:resource="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#prenotazione2"/>
+        <untitled-ontology-10:is_owned rdf:resource="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#paola_campaniello"/>
+        <untitled-ontology-10:is_published_on rdf:resource="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#AirBnB"/>
+        <untitled-ontology-10:is_situated rdf:resource="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Brooklyn"/>
+        <untitled-ontology-10:is_situated rdf:resource="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#New_York"/>
+        <untitled-ontology-10:construction_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2002</untitled-ontology-10:construction_year>
+        <untitled-ontology-10:minimum_nights rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</untitled-ontology-10:minimum_nights>
+        <untitled-ontology-10:number_of_reviews rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</untitled-ontology-10:number_of_reviews>
+        <untitled-ontology-10:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">500.0</untitled-ontology-10:price>
+        <untitled-ontology-10:rating rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.5</untitled-ontology-10:rating>
+        <untitled-ontology-10:room_type>Private room</untitled-ontology-10:room_type>
+        <untitled-ontology-10:via>via Washington</untitled-ontology-10:via>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#casa_Romana -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#casa_Romana">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Alloggio"/>
+        <untitled-ontology-10:is_owned rdf:resource="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#paola_campaniello"/>
+        <untitled-ontology-10:is_published_on rdf:resource="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#AirBnB"/>
+        <untitled-ontology-10:is_situated rdf:resource="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Manhattan"/>
+        <untitled-ontology-10:is_situated rdf:resource="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#New_York"/>
+        <untitled-ontology-10:construction_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2012</untitled-ontology-10:construction_year>
+        <untitled-ontology-10:minimum_nights rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</untitled-ontology-10:minimum_nights>
+        <untitled-ontology-10:number_of_reviews rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</untitled-ontology-10:number_of_reviews>
+        <untitled-ontology-10:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">300.0</untitled-ontology-10:price>
+        <untitled-ontology-10:rating rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.0</untitled-ontology-10:rating>
+        <untitled-ontology-10:room_type>Private room</untitled-ontology-10:room_type>
+        <untitled-ontology-10:via>via Italy</untitled-ontology-10:via>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#japigia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#japigia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Quartiere"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#marco_blu -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#marco_blu">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Cliente"/>
+        <untitled-ontology-10:make rdf:resource="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#pagamento1"/>
+        <untitled-ontology-10:make rdf:resource="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#pagamento2"/>
+        <untitled-ontology-10:username>marcoblu</untitled-ontology-10:username>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#mauro_carlucci -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#mauro_carlucci">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Proprietario"/>
+        <untitled-ontology-10:username>maurocarlu</untitled-ontology-10:username>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#pagamento1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#pagamento1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Pagamento"/>
+        <untitled-ontology-10:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#float">100.0</untitled-ontology-10:amount>
+        <untitled-ontology-10:payment_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-02-12T14:30:00</untitled-ontology-10:payment_date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#pagamento2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#pagamento2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Pagamento"/>
+        <untitled-ontology-10:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#float">200.0</untitled-ontology-10:amount>
+        <untitled-ontology-10:payment_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-01-30T14:30:00</untitled-ontology-10:payment_date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#paola_campaniello -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#paola_campaniello">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Proprietario"/>
+        <untitled-ontology-10:username>paolacamp</untitled-ontology-10:username>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#prenotazione1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#prenotazione1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Prenotazione"/>
+        <untitled-ontology-10:submitted_by rdf:resource="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#marco_blu"/>
+        <untitled-ontology-10:check_in_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-02-13T14:30:00</untitled-ontology-10:check_in_date>
+        <untitled-ontology-10:check_out_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-02-15T14:30:00</untitled-ontology-10:check_out_date>
+        <untitled-ontology-10:guest_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</untitled-ontology-10:guest_number>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#prenotazione2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#prenotazione2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#Prenotazione"/>
+        <untitled-ontology-10:submitted_by rdf:resource="http://www.semanticweb.org/paola/ontologies/2024/1/untitled-ontology-10#marco_blu"/>
+        <untitled-ontology-10:check_in_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-02-01T14:30:00</untitled-ontology-10:check_in_date>
+        <untitled-ontology-10:check_out_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-02-03T14:30:00</untitled-ontology-10:check_out_date>
+        <untitled-ontology-10:guest_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</untitled-ontology-10:guest_number>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
