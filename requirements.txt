@@ -1,11 +1,11 @@
-pip install numpy
-pip install pandas
-pip install matplotlib
-pip install seaborn
-pip install plotly
-pip install ipwidgets>=7,6
-pip install jupyter-dash
-pip install owlready2
-pip install pyswip
-pip install scikit-learn
-pip install xgboost
+numpy
+pandas
+matplotlib
+seaborn
+plotly
+ipwidgets>=7.6
+jupyter-dash
+owlready2
+pyswip
+scikit-learn
+xgboost
