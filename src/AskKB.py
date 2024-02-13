@@ -133,16 +133,12 @@ def ask_user_preferences_and_query(prolog):
         except ValueError:
             print("Input non valido, inserisci un numero tra 50 e 1200.")
 
-    # Get all Airbnb IDs from the Prolog knowledge base
     airbnb_ids = [soln["AirbnbId"] for soln in prolog.query("price(AirbnbId, _)")]
 
-    # Query the highest_review_score rule
     highest_review_score = list(prolog.query(f"highest_review_score({airbnb_ids}, '{pref_room_type}', '{pref_cancellation_policy}', {pref_price_max}, HighestReviewScoreAirbnbId)"))
 
-    # Get the Airbnb ID with the highest final score
     highest_review_score_id = highest_review_score[0]['HighestReviewScoreAirbnbId']
 
-    # Query all the facts related to this Airbnb ID
     airbnb_facts = list(prolog.query(f"price({highest_review_score_id}, Price), "
                                      f"neighbourhood({highest_review_score_id}, Neighbourhood), "
                                      f"minimum_nights({highest_review_score_id}, MinNights), "
@@ -152,10 +148,8 @@ def ask_user_preferences_and_query(prolog):
                                      f"room_type({highest_review_score_id}, RoomType), "
                                      f"host_identity_verified({highest_review_score_id}, HostIdentityVerified)"))
 
-    # Print the Airbnb ID with the highest final score
     print(f"L'airbnb con lo score migliore è quello con id: {highest_review_score_id}")
 
-    # Print all the facts related to this Airbnb ID
     for fact in airbnb_facts:
         print(f"Price: {fact['Price']}")
         print(f"Neighbourhood: {fact['Neighbourhood']}")

@@ -20,8 +20,6 @@ class CreateKB:
         df['neighbourhood'] = df['neighbourhood'].replace("Bull's Head", "Bulls Head")
         df['neighbourhood'] = df['neighbourhood'].replace("Prince's Bay", "Princes Bay")
 
-        #print(df.columns)
-
         # Crea un file Prolog con tutti i fatti
         with open('KB.pl', 'w') as f:
             for index, row in df.iterrows():
@@ -293,6 +291,6 @@ class CreateKB:
                 ).
             """)
 
-# Crea un'istanza della classe KnowledgeBase e chiama il metodo createKnowledgeBase
+
 kb = CreateKB()
 kb.createKnowledgeBase()

@@ -28,21 +28,21 @@ class AirbnbDatasetPreprocessing:
             self.data = self.data.drop(columns=columns_to_drop)
             self.data.drop_duplicates(inplace=True)
 
-            # Rimuovi simbolo "$" e converti la colonna 'price' in numerica
+            # Rimuovo simbolo "$" e converto la colonna 'price' in numerica
             self.data['price'] = self.data['price'].replace('[\$,]', '', regex=True)
             self.data['price'] = pd.to_numeric(self.data['price'], errors='coerce')
-            # Rimuovi simbolo "$" e converti la colonna 'service fee' in numerica
+            # Rimuovo simbolo "$" e converto la colonna 'service fee' in numerica
             self.data['service fee'] = self.data['service fee'].replace('[\$,]', '', regex=True)
             self.data['service fee'] = pd.to_numeric(self.data['service fee'], errors='coerce')
 
-            # Sostituisci i valori non numerici con la media della colonna 'price'
+            # Sostituisco i valori non numerici con la media della colonna 'price'
             self.data['price'].fillna(self.data['price'].mean(), inplace=True)
-            # Sostituisci i valori non numerici con la media della colonna 'service fee'
+            # Sostituisco i valori non numerici con la media della colonna 'service fee'
             self.data['service fee'].fillna(self.data['service fee'].mean(), inplace=True)
 
-            # Converti la colonna 'construction year' in tipo int
+            # Converto la colonna 'construction year' in tipo int
             self.data['Construction year'] = self.data['Construction year'].astype('Int64')
-            # Converti la colonna 'minimum nights' in tipo int
+            # Converto la colonna 'minimum nights' in tipo int
             self.data['minimum nights'] = self.data['minimum nights'].astype('Int64')
 
             # Converto last review da object a data
@@ -119,7 +119,7 @@ class AirbnbDatasetPreprocessing:
                 print(f"Errore durante il salvataggio dei dati processati: {str(e)}")
 
 
-# Esempio di utilizzo
+
 original_file_path = '../dataset/Originali/Airbnb_Open_Data.csv'
 output_directory = '../dataset'
 preprocessor = AirbnbDatasetPreprocessing(original_file_path, output_directory)
